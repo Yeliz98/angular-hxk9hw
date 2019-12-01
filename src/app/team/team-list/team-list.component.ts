@@ -21,19 +21,22 @@ export class TeamListComponent implements OnInit {
         206,
         8051470,
         'kai.petersen@hs-flensburg.de'),
-      new Team('https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-11/petersen_kai.jpg.jpeg?itok=JVf1P7aR', 
-      'Sönke Cordts',
+      new Team('https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-10/cords_soenke.jpg.jpeg?itok=REq2aLNc', 
+       'Sönke Cordts',
        'Professor',
-        206,
-        8051470,
-        'kai.petersen@hs-flensburg.de'),
-      new Team('https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-11/petersen_kai.jpg.jpeg?itok=JVf1P7aR', 
+        224,
+        8051406,
+        'soenke.cordts@hs-flensburg.de'),
+      new Team('https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-12/gerken_jan.jpg.jpeg?itok=gkw2kJBB', 
       'Jan Gerken',
        'Professor',
-        206,
-        8051470,
-        'kai.petersen@hs-flensburg.de')
+        221,
+        8051471,
+        'jan.gerken@hs-flensburg.de')
     ];
+  }
+   trackStockByCode(index, team) {
+    return team.name;
   }
 
 }
