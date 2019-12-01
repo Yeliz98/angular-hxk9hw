@@ -5,5 +5,5 @@ export class Team {
               public position: string,
               public room: number,
               public phone: number,
-              public emal: string) {}
+              public email: string) {}
 }
