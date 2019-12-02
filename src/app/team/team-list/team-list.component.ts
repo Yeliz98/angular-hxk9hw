@@ -35,7 +35,7 @@ export class TeamListComponent implements OnInit {
         'jan.gerken@hs-flensburg.de')
     ];
   }
-   trackStockByCode(index, team) {
+   trackTeamByName(index, team) {
     return team.name;
   }
 
