@@ -11,7 +11,7 @@ import { EventListComponent } from './events/event-list/event-list.component';
 import { NewComponent } from './news/new/new.component';
 import { ProjectComponent } from './projects/project/project.component';
 import { PublicationComponent } from './publications/publication/publication.component';
-import { GroupsComponent } from './groups/groups.component';
+
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule.forRoot([
@@ -19,7 +19,7 @@ import { GroupsComponent } from './groups/groups.component';
       {path:'team', component:TeamListComponent},
       {path:'events', component:EventListComponent}
   ], {useHash: true})],
-  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, GroupsComponent ],
+  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
