@@ -11,15 +11,20 @@ import { EventListComponent } from './events/event-list/event-list.component';
 import { NewComponent } from './news/new/new.component';
 import { ProjectComponent } from './projects/project/project.component';
 import { PublicationComponent } from './publications/publication/publication.component';
+import { NewsService } from './services/news.service';
+import { CreateNewsComponent } from './news/create-news/create-news.component';
+import { NewsListComponent } from './news/news-list/news-list.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule.forRoot([
       {path:'group', component:GroupComponent}, 
       {path:'team', component:TeamListComponent},
-      {path:'events', component:EventListComponent}
+      {path:'events', component:EventListComponent},
+      {path:'new', component:NewComponent}
   ], {useHash: true})],
-  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent ],
+  bootstrap:    [ AppComponent ],
+  providers: [NewsService]
 })
 export class AppModule { }
