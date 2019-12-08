@@ -14,6 +14,7 @@ import { PublicationComponent } from './publications/publication/publication.com
 import { NewsService } from './services/news.service';
 import { CreateNewsComponent } from './news/create-news/create-news.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
+import { LoginComponent } from './user/login/login.component';
 
 
 @NgModule({
@@ -21,9 +22,12 @@ import { NewsListComponent } from './news/news-list/news-list.component';
       {path:'group', component:GroupComponent}, 
       {path:'team', component:TeamListComponent},
       {path:'events', component:EventListComponent},
-      {path:'new', component:NewComponent}
+      {path:'new', component:NewComponent},
+      {path:'publication', component:PublicationComponent},
+      {path:'project', component:ProjectComponent},
+      {path:'login', component:LoginComponent},
   ], {useHash: true})],
-  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent ],
+  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent ],
   bootstrap:    [ AppComponent ],
   providers: [NewsService]
 })

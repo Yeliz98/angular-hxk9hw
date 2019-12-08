@@ -1,5 +1,10 @@
 <div class="image"><img src="https://www.uni-flensburg.de/fileadmin/content/_processed_/3/9/csm_header-hs-flensburg_4e11639ec9.jpg"></div>
 <div class="links">
+   <span>
+    <a routerLink="/login" routerLinkActive="active">
+      Login
+    </a>
+  </span>
   <span>
     <a routerLink="/group" routerLinkActive="active">
       Group
@@ -10,14 +15,24 @@
       Team
     </a>
   </span>
-  <span>
-    <a routerLink="/events" routerLinkActive="active">
-      Events
-      </a>
+   <span>
+    <a routerLink="/publication" routerLinkActive="active">
+      Publications
+    </a>
+  </span>
+   <span>
+    <a routerLink="/project" routerLinkActive="active">
+      Projects
+    </a>
   </span>
    <span>
     <a routerLink="/new" routerLinkActive="active">
       News
+      </a>
+  </span>
+  <span>
+    <a routerLink="/events" routerLinkActive="active">
+      Events
       </a>
   </span>
 <router-outlet> </router-outlet>
