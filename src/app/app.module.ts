@@ -22,7 +22,7 @@ import { LoginComponent } from './user/login/login.component';
       {path:'group', component:GroupComponent}, 
       {path:'team', component:TeamListComponent},
       {path:'events', component:EventListComponent},
-      {path:'new', component:NewComponent},
+      {path:'new', component:NewsListComponent},
       {path:'publication', component:PublicationComponent},
       {path:'project', component:ProjectComponent},
       {path:'login', component:LoginComponent},

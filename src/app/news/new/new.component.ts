@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { News } from './model/news';
+import { News } from '../../model/news';
 
 @Component({
   selector: 'app-new',

@@ -25,7 +25,7 @@ export class NewsService {
     ];
   }
 
-  getProducts(): Observable<News[]> {
+  getNews(): Observable<News[]> {
     return Observable.of(this.news);
   }
 /*
