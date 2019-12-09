@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { News } from '../new/model/news';
+import { News } from '../model/news';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/throw';
@@ -25,8 +25,8 @@ export class NewsService {
     ];
   }
 
-  getNews(): Observable<News[]> {
-    return Observable.of(this.news);
+  getNews() {
+    return this.news;
   }
 /*
   changeQuantity(id: number, changeInQuantity: number): Observable<News> {
@@ -36,11 +36,11 @@ export class NewsService {
     return Observable.of(product);
   }
 */
-  createNews(news: News): Observable<any> {
-    let newsClone = Object.assign({}, news);;
+  createNews(news: News) {
+   // let newsClone = Object.assign({}, news);
     //productClone.id = this.products.length + 1;
     //productClone.quantityInCart = 0;
-    this.news.push(newsClone);
-    return Observable.of(newsClone);
+    this.news.push(news);
+    //return Observable.of(newsClone);
   }
 }

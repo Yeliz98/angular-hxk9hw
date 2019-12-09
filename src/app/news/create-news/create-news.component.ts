@@ -16,8 +16,8 @@ export class CreateNewsComponent {
     if (newsForm.invalid) {
       this.message = 'Please correct all errors and resubmit the form';
     } else {
-      const news: News = newsForm.value;
-      this.newsService.createNews(news)
+      const news: News = newsForm.value.News;
+      this.newsService.createNews(news);
     }
   }
 
