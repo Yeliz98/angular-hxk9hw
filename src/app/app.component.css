@@ -1,11 +1,16 @@
 p {
   font-family: Lato;
+  
 }
 .links, .links a {
-  padding:10px;
+  padding:30px;
+  font-size: 20px;
 }
 
 .links a.active {
   background-color:lightblue;
+}
+img {
+  width: 100%;
 }
 
