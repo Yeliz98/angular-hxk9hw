@@ -23,7 +23,7 @@ export class ProjectService {
       {
         id: 3,
         name: 'Software Technik',
-        members:'Kai Petersen, Yeliz Özay',
+        members:'Yeliz Özay',
         sponsor:'Toni Bauer',
         description:'IndustrietageIndustrietageIndustrietageIndustrietage IndustrietageIndustrietageIndustrietage IndustrietageIndustrietageIndustrietage Industrietage'
       }
