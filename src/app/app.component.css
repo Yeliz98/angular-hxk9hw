@@ -5,6 +5,7 @@ p {
 .links, .links a {
   padding:30px;
   font-size: 20px;
+  text-align: center;
 }
 
 .links a.active {
@@ -12,5 +13,11 @@ p {
 }
 img {
   width: 100%;
+}
+
+.footer {
+  padding:5px;
+  background-color:rgb(146, 189, 245);
+  text-align:right;
 }
 
