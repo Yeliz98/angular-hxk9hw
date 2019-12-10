@@ -17,6 +17,8 @@ import { NewsListComponent } from './news/news-list/news-list.component';
 import { LoginComponent } from './user/login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { ProjectListComponent } from './projects/project-list/project-list.component';
+import { ProjectService } from './services/project.service';
 
 
 @NgModule({
@@ -26,13 +28,13 @@ import { ImprintComponent } from './imprint/imprint.component';
       {path:'events', component:EventListComponent},
       {path:'new', component:NewsListComponent},
       {path:'publication', component:PublicationComponent},
-      {path:'project', component:ProjectComponent},
+      {path:'project', component:ProjectListComponent},
       {path:'login', component:LoginComponent},
       {path:'contact', component:ContactComponent},
       {path:'imprint', component:ImprintComponent}, 
   ], {useHash: true})],
-  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent ],
+  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent, ProjectListComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [NewsService]
+  providers: [NewsService, ProjectService]
 })
 export class AppModule { }
