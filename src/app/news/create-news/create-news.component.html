@@ -1,6 +1,6 @@
-<h3>
+<h2>
   Create News
-</h3>
+</h2>
 
 <div>
   <h4 class="error">{{message}}</h4>
@@ -18,7 +18,7 @@
       <div class="error" *ngIf="(newsTopic.dirty  || message) && newsTopic.invalid">
         <!-- Cheating, since there is only one way the product name field could be invalid -->
         News Topic is required
-      </div>
+      </div> <br>
       <div>
         <input type="text"
                ngModel
@@ -31,7 +31,7 @@
         <!-- Cheating, since there is only one way the product name field could be invalid -->
         News Comment is required
       </div>
-    </div>
+    </div> <br>
     <button type="submit">Create</button>
   </form>
 </div>
