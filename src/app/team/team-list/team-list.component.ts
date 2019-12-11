@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../../model/team';
+import { TeamService } from '../../services/team.service';
 
 @Component({
   selector: 'app-team-list',
@@ -8,35 +9,12 @@ import { Team } from '../../model/team';
 })
 export class TeamListComponent implements OnInit {
 
-  public team: Array<Team>;
+ public team:Team[];
 
-  constructor() { }
+  constructor(private teamService: TeamService) { }
 
   ngOnInit() {
-
-     this.team = [
-      new Team('https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-11/petersen_kai.jpg.jpeg?itok=JVf1P7aR', 
-      'Kai Petersen',
-       'Professor',
-        206,
-        8051470,
-        'kai.petersen@hs-flensburg.de'),
-      new Team('https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-10/cords_soenke.jpg.jpeg?itok=REq2aLNc', 
-       'Sönke Cordts',
-       'Professor',
-        224,
-        8051406,
-        'soenke.cordts@hs-flensburg.de'),
-      new Team('https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-12/gerken_jan.jpg.jpeg?itok=gkw2kJBB', 
-      'Jan Gerken',
-       'Professor',
-        221,
-        8051471,
-        'jan.gerken@hs-flensburg.de')
-    ];
+    this.team = this.teamService.getTeam();
+    console.log(this.team);
   }
-   trackTeamByName(index, team) {
-    return team.name;
-  }
-
 }

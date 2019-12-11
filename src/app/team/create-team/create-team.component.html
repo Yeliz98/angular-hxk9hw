@@ -1,0 +1,94 @@
+<h2>
+  Create Team
+</h2>
+
+<div>
+  <h4 class="error">{{message}}</h4>
+  <form (ngSubmit)="createTeam(teamForm)" #teamForm="ngForm">
+    <div ngModelGroup="team">
+      <div>
+          <input type="text"
+                 ngModel
+                 name="imageUrl"
+                 #teamImageUrl="ngModel"
+                 imageUrl="imageUrl"
+                 placeholder="Team imageUrl"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(teamImageUrl.dirty  || message) && teamImageUrl.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        ImageUrl is required
+      </div> <br>
+      <div>
+          <input type="text"
+                 ngModel
+                 name="imageUrl"
+                 #teamName="ngModel"
+                 name="name"
+                 placeholder="Team name"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(teamName.dirty  || message) && teamName.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Name is required
+      </div>
+      <br>
+      <div>
+          <input type="text"
+                 ngModel
+                 name="position"
+                 #teamPosition="ngModel"
+                 position="position"
+                 placeholder="Team position"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(teamPosition.dirty  || message) && teamPosition.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Position is required
+      </div>
+      <br>
+      <div>
+          <input type="text"
+                 ngModel
+                 name="room"
+                 #teamRoom="ngModel"
+                 room="room"
+                 placeholder="Team Room"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(teamRoom.dirty  || message) && teamRoom.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Room is required
+      </div> <br>
+      <div>
+          <input type="text"
+                 ngModel
+                 name="phone"
+                 #teamImageUrl="ngModel"
+                 phone="phone"
+                 placeholder="Team Phone"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(teamPhone.dirty  || message) && teamPhone.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Phone is required
+      </div>
+      <br>
+      <div>
+          <input type="text"
+                 ngModel
+                 name="email"
+                 #teamEmail="ngModel"
+                 email="email"
+                 placeholder="Team Email"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(teamEmail.dirty  || message) && teamEmail.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Email is required
+      </div>
+      
+    </div> <br>
+    <button type="submit">Create</button>
+  </form>
+</div>
