@@ -20,4 +20,10 @@ img {
   background-color:rgb(146, 189, 245);
   text-align:right;
 }
+.Login {
+  display:none;
+}
+.Logout {
+  display:block;
+}
 

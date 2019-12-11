@@ -26,10 +26,14 @@ import { CreateProjectComponent } from './projects/create-project/create-project
 import { CreatePublicationComponent } from './publications/create-publication/create-publication.component';
 import { TeamService } from './services/team.service';
 import { CreateTeamComponent } from './team/create-team/create-team.component';
+import { HomeComponent } from './admin/home/home.component';
+import {FormControl, FormGroup,ReactiveFormsModule} from '@angular/forms';
+import { UserSiteComponent } from './user/user-site/user-site.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot([
+  imports:      [ BrowserModule, FormsModule,
+        ReactiveFormsModule, RouterModule.forRoot([
       {path:'group', component:GroupComponent}, 
       {path:'team', component:TeamListComponent},
       {path:'events', component:EventListComponent},
@@ -39,8 +43,9 @@ import { CreateTeamComponent } from './team/create-team/create-team.component';
       {path:'login', component:LoginComponent},
       {path:'contact', component:ContactComponent},
       {path:'imprint', component:ImprintComponent}, 
+      {path:'user', component:UserSiteComponent}
   ], {useHash: true})],
-  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent, ProjectListComponent, PublicationListComponent, CreateProjectComponent, CreatePublicationComponent, CreateTeamComponent ],
+  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent, ProjectListComponent, PublicationListComponent, CreateProjectComponent, CreatePublicationComponent, CreateTeamComponent, HomeComponent, UserSiteComponent ],
   bootstrap:    [ AppComponent ],
   providers: [NewsService, ProjectService, PublicationService, UserService, TeamService]
 })

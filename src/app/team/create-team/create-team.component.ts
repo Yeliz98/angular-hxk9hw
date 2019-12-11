@@ -7,7 +7,7 @@ import { TeamService } from '../../services/team.service';
   templateUrl: './create-team.component.html',
   styleUrls: ['./create-team.component.css']
 })
-export class CreateTeamComponent implements OnInit {
+export class CreateTeamComponent{
 
   public message = '';
   constructor(private teamService: TeamService) { }

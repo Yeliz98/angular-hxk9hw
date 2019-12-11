@@ -1,10 +1,14 @@
 <div class="image"><img src="https://www.uni-flensburg.de/fileadmin/content/_processed_/3/9/csm_header-hs-flensburg_4e11639ec9.jpg"></div>
 <div class="links">
-   <span>
-    <a routerLink="/login" routerLinkActive="active">
+   <span [class]="userService.isLogin ? 'Login nav-item' : 'logout' ">
+    <a routerLink="login" routerLinkActive="active">
       Login
     </a>
   </span>
+  <span [class]="userService.isLogin ? 'logout' : 'Login nav-item' "> 
+    <a class="nav-link" routerLink="user"> Admin </a>
+  </span>
+  
   <span>
     <a routerLink="/group" routerLinkActive="active">
       Group
@@ -36,7 +40,6 @@
       </a>
   </span>
 </div>
-  
 <router-outlet> </router-outlet>
 
 <div class="footer">
@@ -50,6 +53,11 @@
     <a routerLink="/imprint" routerLinkActive="active">
       Imprint
       </a>
+  </span> 
+  <br>
+  <span [class]="userService.isLogin ? 'logout' : 'Login nav-item' ">
+                    <a class="nav-link" (click)="userService.logout()" routerLink="login">Logout</a>
   </span>
 </div>
+
   
