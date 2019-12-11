@@ -34,4 +34,10 @@ export class ProjectService {
     return this.projects;
   }
 
+  createProjects(projects: Projects) {
+   
+    this.projects.push(projects);
+    
+  }
+
 }

@@ -21,6 +21,10 @@ import { ProjectListComponent } from './projects/project-list/project-list.compo
 import { ProjectService } from './services/project.service';
 import { PublicationService } from './services/publication.service';
 import { PublicationListComponent } from './publications/publication-list/publication-list.component';
+import { UserService } from './services/user.service';
+import { CreateProjectComponent } from './projects/create-project/create-project.component';
+import { CreatePublicationComponent } from './publications/create-publication/create-publication.component';
+import { TeamService } from './services/team.service';
 
 
 @NgModule({
@@ -35,8 +39,8 @@ import { PublicationListComponent } from './publications/publication-list/public
       {path:'contact', component:ContactComponent},
       {path:'imprint', component:ImprintComponent}, 
   ], {useHash: true})],
-  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent, ProjectListComponent, PublicationListComponent ],
+  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent, ProjectListComponent, PublicationListComponent, CreateProjectComponent, CreatePublicationComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [NewsService, ProjectService, PublicationService]
+  providers: [NewsService, ProjectService, PublicationService, UserService, TeamService]
 })
 export class AppModule { }

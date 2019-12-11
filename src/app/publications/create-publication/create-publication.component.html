@@ -1,0 +1,37 @@
+<h2>
+  Create Publication
+</h2>
+
+<div>
+  <h4 class="error">{{message}}</h4>
+  <form (ngSubmit)="createPublication(publicationsForm)" #publicationsForm="ngForm">
+    <div ngModelGroup="publications">
+      <div>
+          <input type="text"
+                 ngModel
+                 name="name"
+                 #publicationsName="ngModel"
+                 name="name"
+                 placeholder="Publication Name"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(publicationsName.dirty  || message) && publicationsName.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Name is required
+      </div> <br>
+      <div>
+        <input type="text"
+               ngModel
+               name="typ"
+               placeholder="Publications Typ"
+               #publicationsTyp="ngModel"
+               required>
+      </div>
+      <div class="error" *ngIf="(publicationsTyp.dirty || message) && publicationsTyp.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Publication Typ is required
+      </div>
+    </div> <br>
+    <button type="submit">Create</button>
+  </form>
+</div>

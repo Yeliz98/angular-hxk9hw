@@ -1,0 +1,77 @@
+<h2>
+  Create Project
+</h2>
+
+<div>
+  <h4 class="error">{{message}}</h4>
+  <form (ngSubmit)="createProjects(projectsForm)" #projectsForm="ngForm">
+    <div ngModelGroup="projects">
+      <div>
+          <input type="text"
+                 ngModel
+                 name="id"
+                 #projectsId="ngModel"
+                 id="id"
+                 placeholder="Project ID"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(projectsId.dirty  || message) && projectsId.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        ID is required
+      </div> <br>
+      <div>
+        <input type="text"
+               ngModel
+               name="name"
+               placeholder="Projects Name"
+               #projectsName="ngModel"
+               required>
+      </div>
+      <div class="error" *ngIf="(projectsName.dirty || message) && projectsName.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Project Name is required
+      </div>
+      <br>
+      <div>
+        <input type="textarea"
+               ngModel
+               name="description"
+               placeholder="Projects Description"
+               #projectsDescription="ngModel"
+               required>
+      </div>
+      <div class="error" *ngIf="(projectsDescription.dirty || message) && projectsDescription.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Description is required
+      </div>
+      <br>
+      <div>
+        <input type="text"
+               ngModel
+               name="members"
+               placeholder="Projects Members"
+               #projectsMembers="ngModel"
+               required>
+      </div>
+      <div class="error" *ngIf="(projectsMembers.dirty || message) && projectsMembers.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Members is required
+      </div>
+      <br>
+      <div>
+        <input type="text"
+               ngModel
+               name="sponsor"
+               placeholder="Projects Sponsor"
+               #projectsSponsor="ngModel"
+               required>
+      </div>
+      <div class="error" *ngIf="(projectsSponsor.dirty || message) && projectsSponsor.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Sponsor is required
+      </div>
+      
+    </div> <br>
+    <button type="submit">Create</button>
+  </form>
+</div>

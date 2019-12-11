@@ -41,4 +41,10 @@ export class PublicationService {
   
    }
 
+   createPublication(publications: Publications) {
+   
+    this.publications.push(publications);
+    
+  }
+
 }

@@ -1,0 +1,30 @@
+<form (ngSubmit)="loginUser(userForm)" #userForm="ngForm">
+    <div ngModelGroup="user">
+      <div>
+          <input type="text"
+                 ngModel
+                 name="username"
+                 #userUsername="ngModel"
+                 username="username"
+                 placeholder="Username"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(userUsername.dirty  || message) && userUsername.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Username is required
+      </div> <br>
+      <div>
+        <input type="text"
+               ngModel
+               name="password"
+               placeholder="User Password"
+               #userPassword="ngModel"
+               required>
+      </div>
+      <div class="error" *ngIf="(userPassword.dirty || message) && userPassword.invalid">
+        <!-- Cheating, since there is only one way the product name field could be invalid -->
+        Password is required
+      </div>
+    </div> <br>
+    <button type="submit">Create</button>
+  </form>
