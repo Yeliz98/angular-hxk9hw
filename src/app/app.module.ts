@@ -26,10 +26,8 @@ import { CreateProjectComponent } from './projects/create-project/create-project
 import { CreatePublicationComponent } from './publications/create-publication/create-publication.component';
 import { TeamService } from './services/team.service';
 import { CreateTeamComponent } from './team/create-team/create-team.component';
-import { HomeComponent } from './admin/home/home.component';
-import {FormControl, FormGroup,ReactiveFormsModule} from '@angular/forms';
 import { UserSiteComponent } from './user/user-site/user-site.component';
-
+import {FormControl, FormGroup,ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,
@@ -45,7 +43,7 @@ import { UserSiteComponent } from './user/user-site/user-site.component';
       {path:'imprint', component:ImprintComponent}, 
       {path:'user', component:UserSiteComponent}
   ], {useHash: true})],
-  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent, ProjectListComponent, PublicationListComponent, CreateProjectComponent, CreatePublicationComponent, CreateTeamComponent, HomeComponent, UserSiteComponent ],
+  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent, ProjectListComponent, PublicationListComponent, CreateProjectComponent, CreatePublicationComponent, CreateTeamComponent, UserSiteComponent ],
   bootstrap:    [ AppComponent ],
   providers: [NewsService, ProjectService, PublicationService, UserService, TeamService]
 })
