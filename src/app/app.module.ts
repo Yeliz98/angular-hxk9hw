@@ -28,6 +28,8 @@ import { TeamService } from './services/team.service';
 import { CreateTeamComponent } from './team/create-team/create-team.component';
 import { UserSiteComponent } from './user/user-site/user-site.component';
 import {FormControl, FormGroup,ReactiveFormsModule} from '@angular/forms';
+import { EventService } from './services/event.service';
+import { CreateEventComponent } from './events/create-event/create-event.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,
@@ -43,8 +45,8 @@ import {FormControl, FormGroup,ReactiveFormsModule} from '@angular/forms';
       {path:'imprint', component:ImprintComponent}, 
       {path:'user', component:UserSiteComponent}
   ], {useHash: true})],
-  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent, ProjectListComponent, PublicationListComponent, CreateProjectComponent, CreatePublicationComponent, CreateTeamComponent, UserSiteComponent ],
+  declarations: [ AppComponent, GroupComponent, TeamListComponent, EventListComponent, NewComponent, ProjectComponent, PublicationComponent, CreateNewsComponent, NewsListComponent, LoginComponent, ContactComponent, ImprintComponent, ProjectListComponent, PublicationListComponent, CreateProjectComponent, CreatePublicationComponent, CreateTeamComponent, UserSiteComponent, CreateEventComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [NewsService, ProjectService, PublicationService, UserService, TeamService]
+  providers: [NewsService, ProjectService, PublicationService, UserService, TeamService, EventService]
 })
 export class AppModule { }

@@ -1,0 +1,36 @@
+<h2>
+  Create Event
+</h2>
+
+<div>
+  <h4 class="error">{{message}}</h4>
+  <form (ngSubmit)="createEvents(eventForm)" #eventForm="ngForm">
+    <div ngModelGroup="event">
+      <div>
+          <input type="text"
+                 ngModel
+                 name="name"
+                 #eventName="ngModel"
+                 name="name"
+                 placeholder="Event Name"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(eventName.dirty  || message) && eventName.invalid">
+      Name is required
+      </div> <br>
+      <div>
+          <input type="text"
+                 ngModel
+                 name="kind"
+                 #eventKind="ngModel"
+                 kind="kind"
+                 placeholder="Event Kind"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(eventKind.dirty  || message) && eventKind.invalid">
+      Kind is required
+      </div>
+    </div> <br>
+    <button type="submit">Create</button>
+  </form>
+</div>

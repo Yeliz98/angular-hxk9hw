@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Event } from '../model/event';
+import { Event } from '../../model/event';
+import { EventService } from '../../services/event.service';
 
 @Component({
   selector: 'app-event-list',
@@ -8,25 +9,13 @@ import { Event } from '../model/event';
 })
 export class EventListComponent implements OnInit {
 
-  public event: Array<Event>;
+  public event:Event[];
 
-  constructor() { }
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
-
-    this.event = [
-      new Event(
-        'Cloud-Architekturen',
-        'wissenschafliche Konferenz',
-
-      ),
-      new Event(
-       'Angular 2020',
-        'Lehrveranstaltung'),
-      new Event(
-       'Angular Tour',
-        'Industrietage')
-    ];
+    this.event = this.eventService.getEvents();
+    console.log(this.event);
   }
 
 }
