@@ -1,5 +1,5 @@
 <h2>
-  Create Publication
+  Publikationen hinzufügen
 </h2>
 
 <div>
@@ -12,26 +12,42 @@
                  name="name"
                  #publicationsName="ngModel"
                  name="name"
-                 placeholder="Publication Name"
+                 placeholder="Name der Publikation"
                  required/>
       </div>
       <div class="error" *ngIf="(publicationsName.dirty  || message) && publicationsName.invalid">
-        <!-- Cheating, since there is only one way the product name field could be invalid -->
         Name is required
       </div> <br>
       <div>
-        <input type="text"
+        <select type="text"
                ngModel
                name="typ"
                placeholder="Publications Typ"
                #publicationsTyp="ngModel"
                required>
+               <option selected> wissenschaftliches Journal </option>
+               <option> Konferenzbeitrag </option>
+               <option> Buch </option>
+               <option> Herausgeberbuch </option>
+               <option> Magazin </option>
+        </select>
       </div>
       <div class="error" *ngIf="(publicationsTyp.dirty || message) && publicationsTyp.invalid">
-        <!-- Cheating, since there is only one way the product name field could be invalid -->
         Publication Typ is required
+      </div> <br>
+      <div>
+          <input type="text"
+                 ngModel
+                 name="assignment"
+                 #publicationsAssignment="ngModel"
+                 assignment="assignment"
+                 placeholder="Zugeordnetes Projekt"
+                 required/>
+      </div>
+      <div class="error" *ngIf="(publicationsAssignment.dirty  || message) && publicationsAssignment.invalid">
+        Assignment is required
       </div>
     </div> <br>
-    <button type="submit">Create</button>
+    <button type="submit">Hinzufügen</button>
   </form>
 </div>

@@ -10,24 +10,19 @@ export class PublicationService {
     this.publications = [
       {
         name: 'Software Engineering',
-        typ: 'wissenschaftliches Journal'
+        typ: 'wissenschaftliches Journal',
+        assignment: 'Learning Angular step by step'
       },
       {
         name: 'Software Projekt',
-        typ: 'Konferenzbeitrag'
+        typ: 'Konferenzbeitrag',
+        assignment: 'Capstone'
       },
       {
         name: 'Software Projekt',
-        typ: 'Buch'
+        typ: 'Buch',
+        assignment: 'HTML & CSS'
       },
-      {
-        name: 'Software Projekt',
-        typ: 'Herausgeberbuch'
-      },
-      {
-        name: 'Software Projekt',
-        typ: 'Magazin'
-      }
     ];
   }
 
