@@ -18,21 +18,14 @@ export class TeamService {
         email:'kai.petersen@hs-flensburg.de'
       },
       {
-        imageUrl:'https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-10/cords_soenke.jpg.jpeg?itok=REq2aLNc', 
-        name: 'Sönke Cordts',
-        position:'Professor',
-        room: 224,
-        phone:8051406,
-        email: 'soenke.cordts@hs-flensburg.de'
+        imageUrl:'https://leo-akademie.com/files/2017/05/Anonyme_Bewerbung_Unbekannt_Silhouette.jpg', 
+        name: 'Yeliz Özay',
+        position:'Student/in',
+        room: 0,
+        phone:874747474,
+        email: 'yeliz.oezay@stud.hs-flensburg.de'
       },
-      {
-        imageUrl:'https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-12/gerken_jan.jpg.jpeg?itok=gkw2kJBB', 
-        name: 'Jan Gerken',
-        position:'Professor',
-        room: 221,
-        phone: 8051471,
-        email: 'jan.gerken@hs-flensburg.de'
-      }];
+      ];
   }
 
   getTeam() {

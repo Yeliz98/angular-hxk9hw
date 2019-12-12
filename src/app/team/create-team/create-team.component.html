@@ -1,5 +1,5 @@
 <h2>
-  Create Team
+  Mitglied hinzufügen
 </h2>
 
 <div>
@@ -12,38 +12,42 @@
                  name="imageUrl"
                  #teamImageUrl="ngModel"
                  imageUrl="imageUrl"
-                 placeholder="Team imageUrl"
+                 placeholder="imageUrl des Mitglieds"
                  required/>
       </div>
       <div class="error" *ngIf="(teamImageUrl.dirty  || message) && teamImageUrl.invalid">
-        <!-- Cheating, since there is only one way the product name field could be invalid -->
         ImageUrl is required
       </div> <br>
       <div>
           <input type="text"
                  ngModel
-                 name="imageUrl"
+                 name="name"
                  #teamName="ngModel"
                  name="name"
-                 placeholder="Team name"
+                 placeholder="Name des Mitglieds"
                  required/>
       </div>
       <div class="error" *ngIf="(teamName.dirty  || message) && teamName.invalid">
-        <!-- Cheating, since there is only one way the product name field could be invalid -->
         Name is required
       </div>
       <br>
       <div>
-          <input type="text"
+          <select type="text"
                  ngModel
                  name="position"
                  #teamPosition="ngModel"
                  position="position"
-                 placeholder="Team position"
-                 required/>
+                 placeholder="Position"
+                 required>
+                 <option selected> Prof. </option>
+                <option> Student/in </option>
+                <option> WiMi </option>
+                <option> Sekretärin </option>
+                <option> Dr. </option>
+          </select>
+      
       </div>
       <div class="error" *ngIf="(teamPosition.dirty  || message) && teamPosition.invalid">
-        <!-- Cheating, since there is only one way the product name field could be invalid -->
         Position is required
       </div>
       <br>
@@ -53,24 +57,22 @@
                  name="room"
                  #teamRoom="ngModel"
                  room="room"
-                 placeholder="Team Room"
+                 placeholder="Büro"
                  required/>
       </div>
       <div class="error" *ngIf="(teamRoom.dirty  || message) && teamRoom.invalid">
-        <!-- Cheating, since there is only one way the product name field could be invalid -->
         Room is required
-      </div> <br>
+      </div><br>
       <div>
           <input type="text"
                  ngModel
                  name="phone"
-                 #teamImageUrl="ngModel"
+                 #teamPhone="ngModel"
                  phone="phone"
-                 placeholder="Team Phone"
+                 placeholder="Telefon"
                  required/>
       </div>
       <div class="error" *ngIf="(teamPhone.dirty  || message) && teamPhone.invalid">
-        <!-- Cheating, since there is only one way the product name field could be invalid -->
         Phone is required
       </div>
       <br>
@@ -80,15 +82,14 @@
                  name="email"
                  #teamEmail="ngModel"
                  email="email"
-                 placeholder="Team Email"
+                 placeholder="E-mail"
                  required/>
       </div>
       <div class="error" *ngIf="(teamEmail.dirty  || message) && teamEmail.invalid">
-        <!-- Cheating, since there is only one way the product name field could be invalid -->
         Email is required
       </div>
       
-    </div> <br>
-    <button type="submit">Create</button>
+    </div> <br> 
+    <button type="submit">Hinzufügen</button>
   </form>
 </div>
