@@ -1,5 +1,5 @@
 <h2>
-  Create Event
+  Event hinzufügen
 </h2>
 
 <div>
@@ -12,20 +12,21 @@
                  name="name"
                  #eventName="ngModel"
                  name="name"
-                 placeholder="Event Name"
+                 placeholder="Name des Events"
                  required/>
       </div>
       <div class="error" *ngIf="(eventName.dirty  || message) && eventName.invalid">
       Name is required
       </div> <br>
       <div>
-          <input type="text"
-                 ngModel
-                 name="kind"
-                 #eventKind="ngModel"
+        <select name="eventKind" ngModel name="kind" #eventKind="ngModel"
                  kind="kind"
-                 placeholder="Event Kind"
-                 required/>
+                 placeholder="Art"
+                 required>
+          <option selected value="wissenschaftlicheKonferenz" >wissenschaftliche Konferenz</option>
+          <option value="industritage">Industrietage</option>
+          <option value="lehrveranstaltung">Lehrveranstaltung</option>
+        </select>
       </div>
       <div class="error" *ngIf="(eventKind.dirty  || message) && eventKind.invalid">
       Kind is required

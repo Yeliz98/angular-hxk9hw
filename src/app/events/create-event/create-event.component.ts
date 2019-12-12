@@ -10,6 +10,7 @@ import {EventService} from '../../services/event.service';
 export class CreateEventComponent{
 
   public message = '';
+  
   constructor(private eventService: EventService) { }
 
   createEvents(eventForm) {

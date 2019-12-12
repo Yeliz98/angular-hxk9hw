@@ -1,5 +1,6 @@
 <h1> Events </h1> <hr>
 <div *ngFor="let event of event; index as i">
-  <div class="name">Name: {{event.name}}</div>
-  <div class="kind">Art: {{event.kind}}</div> <hr>
+  <div class="name">{{event.name}}</div>
+  <li> {{event.kind}}</li><hr>
 </div>
+<app-create-event></app-create-event>

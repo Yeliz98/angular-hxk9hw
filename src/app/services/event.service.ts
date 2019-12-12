@@ -9,15 +9,15 @@ export class EventService {
   constructor() {
     this.event = [
       {
-        name: 'Cloud-Architekturen',
+        name: 'HTCS',
         kind: 'wissenschaftliche Konferenz'
       },
       {
-        name: 'Angular 2020',
+        name: 'Angular 8',
         kind: 'Lehrveranstaltung'
       },
       {
-        name: 'Angular Tour',
+        name: 'WET 2020',
         kind: 'Industrietage'
       }
     ];
