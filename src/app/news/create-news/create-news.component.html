@@ -1,5 +1,5 @@
 <h2>
-  Create News
+  Aktuelles hinzufügen
 </h2>
 
 <div>
@@ -7,13 +7,17 @@
   <form (ngSubmit)="createNews(newsForm)" #newsForm="ngForm">
     <div ngModelGroup="news">
       <div>
-          <input type="text"
+          <select type="text"
                  ngModel
                  name="topic"
                  #newsTopic="ngModel"
                  topic="topic"
                  placeholder="News Topic"
-                 required/>
+                 required>
+              <option selected > akzeptierte Konferenzbeiträge </option>
+              <option > Besuch von Konferenzen </option>
+              <option > erhalt eines neuen Projektes </option>
+          </select>
       </div>
       <div class="error" *ngIf="(newsTopic.dirty  || message) && newsTopic.invalid">
         <!-- Cheating, since there is only one way the product name field could be invalid -->
@@ -23,15 +27,14 @@
         <input type="text"
                ngModel
                name="comment"
-               placeholder="News Comment"
+               placeholder="Neuigkeit"
                #newsComment="ngModel"
                required>
       </div>
       <div class="error" *ngIf="(newsComment.dirty || message) && newsComment.invalid">
-        <!-- Cheating, since there is only one way the product name field could be invalid -->
         News Comment is required
       </div>
     </div> <br>
-    <button type="submit">Create</button>
+    <button type="submit">Hinzufügen</button>
   </form>
 </div>

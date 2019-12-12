@@ -11,16 +11,16 @@ export class NewsService {
   constructor() {
       this.news = [
       {
-        topic:'Akzeptierte Konferenzbeiträge',
-        comment:'wissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschaflichewissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenz'
+        topic:'akzeptierter Konferenzbeitrag',
+        comment:'Angular for Material Design 2020'
       },
       {
        topic:'Besuch Konferenzen',
-      comment:'LehrveranstaltungLehrveranstaltungLehrveranstaltungLehrveranstaltungLehrveranstaltungLehrveranstaltungLehrveranstaltung LehrveranstaltungLehrveranstaltungLehrveranstaltung LehrveranstaltungLehrveranstaltung vLehrveranstaltungLehrveranstaltungLehrveranstaltung'
+      comment:'WET 2019 wurde am 20.12.2019 wurde von der ganzen IWE Gruppe besucht.'
       },
       {
        topic:'Erhalt neuen Projektes',
-      comment:'IndustrietageIndustrietageIndustrietageIndustrietage IndustrietageIndustrietageIndustrietage IndustrietageIndustrietageIndustrietage Industrietage'
+      comment:'Wir freuen uns euch mitteilen zu können, dass wir ein neues Projekt von der Hochschule Flensburg erhalten haben. Informationen dazu findet ihr am 1.Februar 2020 bei den Projekten.'
       }
     ];
   }
