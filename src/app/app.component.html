@@ -1,4 +1,4 @@
-<div class="image"><img src="https://www.uni-flensburg.de/fileadmin/content/_processed_/3/9/csm_header-hs-flensburg_4e11639ec9.jpg"></div>
+<div><img  class="image" src="https://www.uni-flensburg.de/fileadmin/content/_processed_/3/9/csm_header-hs-flensburg_4e11639ec9.jpg"></div>
 <div class="links">
    <span [class]="userService.isLogin ? 'Login nav-item' : 'logout' ">
     <a routerLink="login" routerLinkActive="active">
@@ -6,32 +6,32 @@
     </a>
   </span>
   <span [class]="userService.isLogin ? 'logout' : 'Login nav-item' "> 
-    <a class="nav-link" routerLink="user"> Admin </a>
+    <a class="nav-link" routerLink="user"> User </a>
   </span>
   
   <span>
     <a routerLink="/group" routerLinkActive="active">
-      Group
+      Institut
     </a>
   </span>
   <span>
     <a routerLink="/team" routerLinkActive="active">
-      Team
+      Mitglieder
     </a>
   </span>
    <span>
     <a routerLink="/publication" routerLinkActive="active">
-      Publications
+      Publikationen
     </a>
   </span>
    <span>
     <a routerLink="/project" routerLinkActive="active">
-      Projects
+      Projekte
     </a>
   </span>
    <span>
     <a routerLink="/new" routerLinkActive="active">
-      News
+      Aktuelles
       </a>
   </span>
   <span>
@@ -42,22 +42,33 @@
 </div>
 <router-outlet> </router-outlet>
 
-<div class="footer">
+<div class="footerright">
   <span>
     <a routerLink="/contact" routerLinkActive="active">
-      Contact
+      Kontakt
       </a>
   </span>
   <br>
   <span>
     <a routerLink="/imprint" routerLinkActive="active">
-      Imprint
+      Impressum
       </a>
   </span> 
   <br>
   <span [class]="userService.isLogin ? 'logout' : 'Login nav-item' ">
                     <a class="nav-link" (click)="userService.logout()" routerLink="login">Logout</a>
   </span>
+</div>
+
+<div class="footerleft">
+  <img src="https://hs-flensburg.de/themes/custom/hsfl/img/Logo_color_schrift_grau_72dpi-320px.png" width="100" height="60">
+  <p> Institut für Web Engineering
+  <p> Kontakt: </p>
+  <ul>
+    <li> Kanzleistraße 91-93, 24943 Flensburg </li>
+    <li> Telefon: +49 (0)461 805 - 01 </li>
+    <li> E-Mail: infopoint@hs-flensburg.de </li>
+  </ul>
 </div>
 
   
