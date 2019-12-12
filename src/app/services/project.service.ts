@@ -6,26 +6,22 @@ export class ProjectService {
   private projects: Projects[];
   constructor() { 
     this.projects = [
-      {
-        id: 1,
-        name: 'Software Engineering',
-        members:'Kai Petersen, Yeliz Özay',
-        sponsor:'Otto Mustermann',
-        description:'wissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenzwissenschaflichewissenschafliche Konferenzwissenschafliche Konferenzwissenschafliche Konferenz'
-      },
-      {
-       id: 2,
-        name: 'Software Projekt',
-        members:'Kai Petersen',
-        sponsor:'Müller Hansen',
-        description:'LehrveranstaltungLehrveranstaltungLehrveranstaltungLehrveranstaltungLehrveranstaltungLehrveranstaltungLehrveranstaltung LehrveranstaltungLehrveranstaltungLehrveranstaltung LehrveranstaltungLehrveranstaltung vLehrveranstaltungLehrveranstaltungLehrveranstaltung'
-      },
-      {
-        id: 3,
-        name: 'Software Technik',
+      { name: 'Learning Angular step by step',
         members:'Yeliz Özay',
-        sponsor:'Toni Bauer',
-        description:'IndustrietageIndustrietageIndustrietageIndustrietage IndustrietageIndustrietageIndustrietage IndustrietageIndustrietageIndustrietage Industrietage'
+        sponsor:'Hochschule Flensburg',
+        description:'Im Web Engineering spielt Angular eine große Rolle, da das Capstone Projekt öffentlich. Daher wird auf das Projekt "Learning Angular step by step sehr viel aufmerksamkeit geschenkt. '
+      },
+      {
+        name: 'Capstone',
+        members:'Kai Petersen',
+        sponsor:'Hochschule Flensburg',
+        description:'Dieses Projekt wird von Prof. Dr. Petersen geleitet und von den Mitgliedern erforscht'
+      },
+      {
+        name: 'HTML & CSS',
+        members:'Yeliz Özay',
+        sponsor:'Kai Petersen',
+        description:'In diesem Projekt wird auf die Programmierumgebung viel Wert gelegt. '
       }
     ];
   }

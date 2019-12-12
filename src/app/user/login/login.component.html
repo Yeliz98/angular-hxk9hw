@@ -2,16 +2,16 @@
     <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
         <div class="form-row">
             <div class="form-group col-md-10">
-                <label for="nameinput">Name: </label>
-                <input type="text" id="nameinput" class="form-control" formControlName="name" placeholder="Name" required>
+                <label for="nameinput"> </label>
+                <input type="text" id="nameinput" class="form-control" formControlName="name" placeholder="Username" required>
             </div>
             <div class="form-group col-md-10">
-                <label for="nameinput">Passwort: </label>
+                <label for="nameinput"> </label>
                 <input type="password" id="password" class="form-control" formControlName="password"
-                       required placeholder="Password">
+                       required placeholder="Passwort">
             </div>
             <div class="form-group col-md-10">
-                <button class="form-group btn btn-primary" type="submit" [disabled]="!profileForm.valid">Login</button>
+                <button class="form-group btn btn-primary" type="submit" [disabled]="!profileForm.valid">Anmelden</button>
             </div>
         </div>
     </form>

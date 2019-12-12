@@ -1,5 +1,5 @@
 export class Projects {
-  constructor(public id: number,
+  constructor(
               public name: string,
               public members: string,
               public sponsor: string,
