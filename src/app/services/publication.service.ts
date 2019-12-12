@@ -9,27 +9,22 @@ export class PublicationService {
   constructor() {
     this.publications = [
       {
-        id: 1,
         name: 'Software Engineering',
         typ: 'wissenschaftliches Journal'
       },
       {
-        id: 2,
         name: 'Software Projekt',
         typ: 'Konferenzbeitrag'
       },
       {
-        id: 3,
         name: 'Software Projekt',
         typ: 'Buch'
       },
       {
-        id: 4,
         name: 'Software Projekt',
         typ: 'Herausgeberbuch'
       },
       {
-        id: 5,
         name: 'Software Projekt',
         typ: 'Magazin'
       }

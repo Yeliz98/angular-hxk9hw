@@ -1,5 +1,6 @@
 export class Publications {
-  constructor(public id: number,
+  constructor(
               public name: string,
-              public typ: string) {}
+              public typ: string,
+              public assignment:string) {}
 }
