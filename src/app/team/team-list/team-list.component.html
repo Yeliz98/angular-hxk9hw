@@ -1,8 +1,8 @@
 <h1> Team </h1>
 <div class="team-container" *ngFor="let team of team; index as i; trackBy: trackTeamByName">
+  <div class="topic"><b>{{team.position}}</b></div>
+  <div class="topic"><b>{{team.name}}</b></div>
   <div class="image"><img [src]="team.imageUrl" width="300" ></div>
-    <div class="position">{{team.position}}</div>
-  <div class="name">{{team.name}}</div>
   <div class="room"><b>Büro:</b> {{team.room}}</div>
   <div class="phone"><b>Telefon:</b> {{team.phone}}</div>
   <div class="email"><b>E-Mail:</b> {{team.email}}</div>

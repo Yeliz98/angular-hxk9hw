@@ -12,7 +12,7 @@ export class TeamService {
       {
         imageUrl:'https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-11/petersen_kai.jpg.jpeg?itok=JVf1P7aR', 
         name:'Kai Petersen',
-        position:'Professor',
+        position:'Prof. Dr.',
         room:206,
         phone:8051470,
         email:'kai.petersen@hs-flensburg.de'
