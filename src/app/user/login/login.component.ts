@@ -10,8 +10,8 @@ import {FormControl, FormGroup,ReactiveFormsModule} from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   isLogin: boolean;
-  private username = 'admin';
-  private password = 'admin';
+  private username = 'kaipetersen';
+  private password = 'angular';
 
   profileForm = new FormGroup({
     name: new FormControl(''),
@@ -33,10 +33,10 @@ export class LoginComponent implements OnInit {
   onSubmit() {
   if (this.profileForm.value.name === this.username && this.profileForm.value.password === this.password) {
     this.login();
-    alert('Login successfully');
+    alert('Sie wurden erfolgreich angemeldet.');
   } else {
     this.logout();
-    alert('Login Failed. Please try again');
+    alert('Ihr Username oder Passwort ist ist nicht korrekt');
   }
   }
 
