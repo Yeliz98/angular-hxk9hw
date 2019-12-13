@@ -18,6 +18,10 @@ export class CreateTeamComponent{
     } else {
       const team: Team = teamForm.value.team;
       this.teamService.createTeam(team);
+      console.log("I have been called - createTeam");
+      console.log(this.teamService.getTeam());
+
+
     }
   }
 }
