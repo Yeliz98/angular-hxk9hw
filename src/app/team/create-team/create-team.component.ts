@@ -20,8 +20,6 @@ export class CreateTeamComponent{
       this.teamService.createTeam(team);
       console.log("I have been called - createTeam");
       console.log(this.teamService.getTeam());
-
-
     }
   }
 }
