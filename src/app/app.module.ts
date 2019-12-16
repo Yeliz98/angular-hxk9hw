@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import {FormControl, FormGroup,ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-
 import { GroupComponent } from './group/group.component';
 import { TeamListComponent } from './team/team-list/team-list.component';
 import { EventListComponent } from './events/event-list/event-list.component';
@@ -27,7 +27,6 @@ import { CreatePublicationComponent } from './publications/create-publication/cr
 import { TeamService } from './services/team.service';
 import { CreateTeamComponent } from './team/create-team/create-team.component';
 import { UserSiteComponent } from './user/user-site/user-site.component';
-import {FormControl, FormGroup,ReactiveFormsModule} from '@angular/forms';
 import { EventService } from './services/event.service';
 import { CreateEventComponent } from './events/create-event/create-event.component';
 
@@ -35,6 +34,7 @@ import { CreateEventComponent } from './events/create-event/create-event.compone
   imports:      [ BrowserModule, FormsModule,
         ReactiveFormsModule, RouterModule.forRoot([
       {path:'group', component:GroupComponent}, 
+       {path:'', component:GroupComponent},
       {path:'team', component:TeamListComponent},
       {path:'events', component:EventListComponent},
       {path:'new', component:NewsListComponent},
